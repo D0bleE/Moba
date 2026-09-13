@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #111111;
+  color: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+  width: 100%;
+  max-width: 440px;
+  padding: 16px;
+  background: #1b1b1b;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.32);
+}
+
+.foto {
+  display: block;
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+}
+
+h1 {
+  margin: 22px 10px 12px;
+  font-size: 29px;
+  line-height: 1.16;
+}
+
+.texto {
+  margin: 0 auto 26px;
+  color: #d4d4d4;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.pregunta {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.botones {
+  position: relative;
+  width: 100%;
+  height: 115px;
+  margin-top: 6px;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  min-width: 112px;
+  padding: 13px 22px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#si {
+  position: absolute;
+  left: 15%;
+  top: 30px;
+  background: #f4f4f4;
+  color: #111;
+}
+
+#si:hover {
+  transform: scale(1.04);
+}
+
+#no {
+  position: absolute;
+  right: 15%;
+  top: 30px;
+  background: #303030;
+  color: #fff;
+  transition: left 0.14s ease, top 0.14s ease, transform 0.14s ease;
+}
+
+.abajo {
+  margin: 2px 0 4px;
+  color: #757575;
+  font-size: 12px;
+}
+
+.final {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.88);
+}
+
+.final.mostrar {
+  display: flex;
+}
+
+.final-contenido {
+  width: 100%;
+  max-width: 390px;
+  padding: 34px 24px;
+  background: #1b1b1b;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.emoji {
+  margin-bottom: 10px;
+  font-size: 58px;
+}
+
+.final h2 {
+  margin: 0 0 14px;
+  font-size: 34px;
+}
+
+.final p {
+  margin: 0 0 24px;
+  color: #dddddd;
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+#cerrar {
+  background: #f4f4f4;
+  color: #111;
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 12px;
+  }
+
+  .card {
+    padding: 13px;
+  }
+
+  .foto {
+    height: min(55vh, 330px);
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .texto {
+    font-size: 15px;
+  }
+
+  #si {
+    left: 5%;
+  }
+
+  #no {
+    right: 5%;
+  }
+}
